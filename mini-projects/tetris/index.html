@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Классический Тетрис</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="game-container">
+			<canvas id="tetrisCanvas"></canvas>
+			<div class="game-info">
+				<h1>TETRIS</h1>
+				<div class="info-block">
+					<h3>Уровень: <span id="level">1</span></h3>
+					<h3>Очки: <span id="score">0</span></h3>
+					<h3>Линии: <span id="lines">0</span></h3>
+				</div>
+				<div class="next-piece">
+					<h3>Следующая:</h3>
+					<canvas id="nextPieceCanvas"></canvas>
+				</div>
+				<div class="controls">
+					<h3>Управление:</h3>
+					<p>← → - Движение</p>
+					<p>↑ - Поворот</p>
+					<p>↓ - Ускорить</p>
+					<p>Пробел - Сбросить</p>
+					<p>P - Пауза</p>
+				</div>
+			</div>
+			<div class="start-screen">
+				<h1>Классический Тетрис</h1>
+				<p>Нажмите любую клавишу чтобы начать</p>
+				<div class="hint">Соберите линии чтобы заработать очки!</div>
+			</div>
+			<div class="game-over-screen hidden">
+				<h2>Игра окончена!</h2>
+				<p>Ваш счет: <span class="final-score">0</span></p>
+				<button class="restart-btn">Играть снова</button>
+				<div class="hint">Попробуйте вращать фигуры раньше!</div>
+			</div>
+			<div class="pause-screen hidden">
+				<h2>ПАУЗА</h2>
+				<p>Нажмите P чтобы продолжить</p>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

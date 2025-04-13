@@ -1,0 +1,148 @@
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #000;
+	font-family: 'Orbitron', sans-serif;
+	overflow: hidden;
+	color: #00f0ff;
+	text-shadow: 0 0 5px #00f0ff;
+}
+
+.game-container {
+	position: relative;
+	width: 95vmin;
+	height: 95vmin;
+	max-width: 800px;
+	max-height: 800px;
+	border: 3px solid #00f0ff;
+	box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+	background-color: #000033;
+	overflow: hidden;
+}
+
+canvas {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: #000033;
+}
+
+.game-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	user-select: none;
+}
+
+.score-display {
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	font-size: 16px;
+	padding: 10px;
+	background-color: rgba(0, 0, 51, 0.7);
+}
+
+.start-screen,
+.game-over-screen,
+.level-complete-screen {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: rgba(0, 0, 51, 0.9);
+}
+
+.start-screen h1 {
+	font-size: 48px;
+	margin-bottom: 30px;
+	color: #ff00ff;
+	text-shadow: 0 0 10px #ff00ff;
+	line-height: 1.2;
+}
+
+.start-screen p {
+	margin: 10px 0;
+	font-size: 18px;
+}
+
+.game-over-screen h2,
+.level-complete-screen h2 {
+	font-size: 36px;
+	margin-bottom: 20px;
+	color: #ff5555;
+	text-shadow: 0 0 10px #ff5555;
+}
+
+.hint {
+	margin-top: 30px;
+	font-size: 14px;
+	color: #aaa;
+	max-width: 80%;
+}
+
+.restart-btn {
+	pointer-events: auto;
+	margin-top: 30px;
+	padding: 12px 24px;
+	background-color: #ff00ff;
+	border: none;
+	color: #000;
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bold;
+	font-size: 16px;
+	cursor: pointer;
+	transition: all 0.3s;
+	box-shadow: 0 0 10px #ff00ff;
+}
+
+.restart-btn:hover {
+	background-color: #ff55ff;
+	transform: scale(1.05);
+}
+
+.hidden {
+	display: none;
+}
+
+/* Анимация звездного фона */
+@keyframes twinkle {
+	0%,
+	100% {
+		opacity: 0.2;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+	.start-screen h1 {
+		font-size: 32px;
+	}
+
+	.start-screen p,
+	.game-over-screen p {
+		font-size: 14px;
+	}
+
+	.score-display {
+		font-size: 12px;
+	}
+}

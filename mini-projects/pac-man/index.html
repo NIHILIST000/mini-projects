@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cosmo Pac-Man</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="game-container">
+			<canvas id="gameCanvas"></canvas>
+			<div class="game-overlay">
+				<div class="score-display">
+					<span>SCORE: <span id="score">0</span></span>
+					<span>LIVES: <span id="lives">3</span></span>
+					<span>LEVEL: <span id="level">1</span></span>
+				</div>
+				<div class="start-screen">
+					<h1>КОСМИЧЕСКИЙ<br />PAC-MAN</h1>
+					<p>ИСПОЛЬЗУЙТЕ СТРЕЛКИ ДЛЯ ДВИЖЕНИЯ</p>
+					<p>НАЖМИТЕ ЛЮБУЮ КЛАВИШУ ДЛЯ СТАРТА</p>
+					<div class="hint">СОБИРАЙТЕ ЗВЕЗДЫ И ИЗБЕГАЙТЕ ПРИШЕЛЬЦЕВ!</div>
+				</div>
+				<div class="game-over-screen hidden">
+					<h2>МИССИЯ ПРОВАЛЕНА</h2>
+					<p>ВАШ СЧЕТ: <span class="final-score">0</span></p>
+					<button class="restart-btn">ПОПРОБОВАТЬ СНОВА</button>
+				</div>
+				<div class="level-complete-screen hidden">
+					<h2>УРОВЕНЬ ПРОЙДЕН!</h2>
+					<p>ГОТОВЬТЕСЬ К СЛЕДУЮЩЕМУ УРОВНЮ</p>
+					<div class="hint">СЛЕДУЮЩИЙ УРОВЕНЬ СЛОЖНЕЕ!</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

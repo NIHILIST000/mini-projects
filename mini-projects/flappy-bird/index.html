@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pixel Flappy</title>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<div class="game-container">
+			<canvas id="gameCanvas" width="800" height="700"></canvas>
+			<div class="game-overlay">
+				<div class="score-display">
+					<span class="current-score">0</span>
+					<span class="high-score">HI: 0</span>
+				</div>
+				<div class="start-screen">
+					<h1>PIXEL FLAPPY</h1>
+					<p>PRESS SPACE OR TAP</p>
+					<div class="pixel-bird"></div>
+				</div>
+				<div class="game-over-screen hidden">
+					<h2>GAME OVER</h2>
+					<p>SCORE: <span class="final-score">0</span></p>
+					<p>BEST: <span class="final-high-score">0</span></p>
+					<button class="restart-btn">PLAY AGAIN</button>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

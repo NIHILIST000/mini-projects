@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Web Paint</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>Web Paint</h1>
+
+			<div class="toolbar">
+				<button id="pencil" class="active-tool">Карандаш</button>
+				<button id="brush">Кисть</button>
+				<button id="eraser">Ластик</button>
+				<button id="line">Линия</button>
+				<button id="rectangle">Прямоугольник</button>
+				<button id="circle">Круг</button>
+				<button id="fill">Заливка</button>
+				<button id="clear">Очистить</button>
+				<button id="save">Сохранить</button>
+
+				<div class="color-picker">
+					<label for="color">Цвет:</label>
+					<input type="color" id="color" value="#000000" />
+
+					<div class="color-options">
+						<div
+							class="color-option"
+							style="background-color: #000000"
+							data-color="#000000"
+						></div>
+						<div
+							class="color-option"
+							style="background-color: #ff0000"
+							data-color="#ff0000"
+						></div>
+						<div
+							class="color-option"
+							style="background-color: #00ff00"
+							data-color="#00ff00"
+						></div>
+						<div
+							class="color-option"
+							style="background-color: #0000ff"
+							data-color="#0000ff"
+						></div>
+						<div
+							class="color-option"
+							style="background-color: #ffff00"
+							data-color="#ffff00"
+						></div>
+						<div
+							class="color-option"
+							style="background-color: #ff00ff"
+							data-color="#ff00ff"
+						></div>
+						<div
+							class="color-option"
+							style="background-color: #ffffff"
+							data-color="#ffffff"
+						></div>
+					</div>
+				</div>
+
+				<label for="size">Размер:</label>
+				<input type="range" id="size" min="1" max="50" value="5" />
+				<span id="size-value">5</span>
+			</div>
+
+			<div class="canvas-container">
+				<canvas id="canvas" width="1000" height="700"></canvas>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
